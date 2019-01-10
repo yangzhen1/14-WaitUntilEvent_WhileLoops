@@ -317,7 +317,7 @@ def run_test_prime_gap():
     print('TEST ENDED!')
 
 
-def next_prime_fuck(m):
+def next_prime_abc(m):
 
     while True:
 
@@ -332,10 +332,10 @@ def prime_gap(m):
 
 
 
-    a = 1
+    a = 0
     while True:
 
-        if m <= next_prime_fuck(a) - a and a != next_prime(a):
+        if m <= next_prime_abc(a) - a:
             break
         print(m)
         print(next_prime(a))
