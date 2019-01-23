@@ -328,21 +328,16 @@ def next_prime_abc(m):
 
 
 def prime_gap(m):
-
-
-
-
-    a = 0
+    i = 2
     while True:
-
-        if m <= next_prime_abc(a) - a:
+        if next_prime(next_prime(i)+1)-next_prime(i)>=m:
             break
-        print(m)
-        print(next_prime(a))
-        print(a)
-        a += 1
+        i +=1
+    return next_prime(i)
 
-    return a
+
+
+
 
     """
     What comes in:  An integer   m   that is at least 2.
@@ -374,7 +369,7 @@ def prime_gap(m):
       :type m: int
     """
     # -------------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #   The testing code is already written for you (above).
     #
     # IMPLEMENTATION REQUIREMENT:
